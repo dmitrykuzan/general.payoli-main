@@ -1,0 +1,114 @@
+$burgerMQ: em(992);
+
+.menu {
+  position: relative;
+  padding-left: 3rem;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 0.1rem;
+    height: 1.7rem;
+    background-color: var(--clr-default-870);
+    transform: translateY(-50%);
+
+    @media (max-width: em(992)) {
+      display: none;
+    }
+  }
+  &__list {
+    align-items: center;
+    gap: 3rem;
+
+    @media (max-width: em(1080)) {
+      gap: 2rem;
+    }
+
+    @media (max-width: $burgerMQ) {
+      flex-direction: column;
+      align-items: start;
+      margin: auto;
+      padding-top: 5rem;
+      padding-right: 3rem;
+      padding-bottom: 3rem;
+      min-width: 100%;
+    }
+  }
+
+  &__item {
+    a {
+      position: relative;
+      display: flex;
+      align-items: center;
+      font-size: 1.5rem;
+      color: var(--clr-primary-200);
+      transition: color var(--transition);
+      gap: 1.5rem;
+
+      &::before {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: -4px;
+        width: 0;
+        height: 2px;
+        background-color: var(--clr-default-300);
+        transition: width 0.3s;
+      }
+
+      @media (max-width: em(992)) {
+        font-weight: 600;
+        font-size: 2rem;
+      }
+
+      @media (hover) {
+        &:hover {
+          color: var(--clr-default-100);
+          transition: color var(--transition);
+          &::before {
+            width: 60%;
+            transition: width 0.3s;
+          }
+        }
+      }
+    }
+
+    &--enter {
+      display: none;
+
+      @media (max-width: em(992)) {
+        display: block;
+      }
+    }
+
+    &--btns {
+      display: none;
+
+      @media (max-width: em(575)) {
+        display: block;
+        min-width: 100%;
+      }
+    }
+  }
+
+  @media (max-width: $burgerMQ) {
+    position: fixed;
+    right: -100%;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+    max-width: 32rem;
+    background-image: var(--clr-default-850);
+    transition: right var(--transition);
+
+    &--active {
+      right: 0;
+      transition: right var(--transition);
+    }
+  }
+}

@@ -1,0 +1,133 @@
+.footer {
+  position: relative;
+  overflow: hidden;
+  padding-top: 25rem;
+  padding-bottom: 13rem;
+  background-image: var(--clr-default-850);
+
+  @media (max-width: em(992)) {
+    padding-top: 16rem;
+    padding-bottom: 8rem;
+  }
+
+  @media (max-width: em(767)) {
+    padding-bottom: 6rem;
+  }
+
+  @media (max-width: em(575)) {
+    padding-bottom: 4rem;
+  }
+
+
+  &__info {
+    z-index: 2;
+    max-width: 69rem;
+    gap: 2.5rem;
+
+    @media (max-width: em(992)) {
+      max-width: initial;
+    }
+  }
+
+  &__top {
+    gap: 3rem;
+
+    @media (max-width: em(575)) {
+      justify-content: space-between;
+    }
+  }
+
+  &__logo {
+  }
+
+  &__links {
+    gap: 0.8rem;
+  }
+
+  &__link {
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      width: 3.2rem;
+      height: 3.2rem;
+      background-color: var(--clr-default-200);
+      transition: background-color var(--transition);
+
+      svg {
+        width: 1.9rem;
+        height: 1.9rem;
+        fill: var(--clr-default-100);
+      }
+
+      @media (hover) {
+        &:hover {
+         background-color: var(--clr-hover-300);
+          transition: background-color var(--transition);
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    gap: 2.5rem;
+  }
+
+  &__text {
+    p {
+      font-size: 1.4rem;
+      line-height: 140%;
+      color: var(--clr-primary-200);
+    }
+  }
+
+  &__policy {
+    gap: 3rem;
+
+    @media (max-width: em(575)) {
+      justify-content: space-between;
+      gap: 2rem;
+    }
+  }
+
+  &__policy-item {
+    a {
+      font-size: 1.8rem;
+      line-height: 150%;
+      color: var(--clr-primary-200);
+      transition: color var(--transition);
+
+      @media (hover) {
+        &:hover {
+          color: var(--clr-default-300);
+          transition: color var(--transition);
+        }
+      }
+    }
+  }
+
+  &__image {
+    position: absolute;
+    right: 0;
+    bottom: -22rem;
+    z-index: 0;
+    width: 89.5rem;
+    height: 89.6rem;
+
+    @media (max-width: em(1740)) {
+      right: -7rem;
+      bottom: -9rem;
+      width: 70rem;
+      height: 70rem;
+    }
+
+    @media (max-width: em(1280)) {
+      right: -30rem !important;
+    }
+
+    @media (max-width: em(992)) {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,80 @@
+.open {
+  position: relative;
+  z-index: 1;
+  padding-top: 13rem;
+
+  @media (max-width: em(992)) {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+
+  @media (max-width: em(767)) {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+
+  &__wrapper {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: -17rem;
+    border-radius: 3rem;
+    padding-top: 6rem;
+    padding-right: 8rem;
+    padding-bottom: 6rem;
+    padding-left: 40rem;
+    box-shadow: var(--clr-shadow-900);
+    background-color: var(--clr-default-100);
+
+    @media (max-width: em(992)) {
+      padding: 3rem;
+      min-height: 60rem;
+      gap: 3rem;
+    }
+
+    @media (max-width: em(767)) {
+      padding: 2rem;
+    }
+  }
+
+  &__image {
+    position: absolute;
+    left: 8rem;
+    bottom: -23rem;
+    width: 28rem;
+    height: 58rem;
+
+    @media (max-width: em(992)) {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &__content {
+    margin-left: auto;
+    max-width: 67rem;
+    gap: 2.5rem;
+
+    @media (max-width: em(992)) {
+      max-width: initial;
+      padding-bottom: 32rem;
+    }
+
+    @media (max-width: em(767)) {
+      gap: 1.5rem;
+    }
+  }
+
+  &__title {
+    span {
+      color: var(--clr-default-300);
+    }
+  }
+
+  &__text {
+  }
+
+  &__button {
+    min-width: 12rem;
+    min-height: 5rem;
+  }
+}

@@ -1,0 +1,214 @@
+// <МИКСИНЫ>==================================================================
+@import "./settings/mixins";
+
+// </МИКСИНЫ>=================================================================
+
+// ФУНКЦИИ====================================================================
+@import "./settings/functions";
+
+// </ФУНКЦИИ>=================================================================
+
+// <Подключаем шрифты>========================================================
+@import "./settings/fonts";
+
+// </Подключаем шрифты>=======================================================
+
+// <ОБНУЛЕНИЕ>================================================================
+@import "./settings/normalize";
+
+// </ОБНУЛЕНИЕ>===============================================================
+
+// <ПЕРЕМЕННЫЕ>===============================================================
+$containerWidth: 123rem;
+
+:root {
+  // base
+  --font-family: "Satoshi", sans-serif;
+  --font-weight: 400;
+  --content-width: 120rem;
+  --container-offset: 1.5rem;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+  --transition: 0.3s;
+
+  // colors
+  --clr-default-100: #fff;
+  --clr-default-200: #0b6dff;
+  --clr-default-300: #9fe320;
+  --clr-default-400: linear-gradient(0deg, #ffffff, #ffffff), #9fe320;
+  --clr-default-500: linear-gradient(0deg, #f8fafb, #f8fafb), #9fe320;
+  --clr-default-600: #d9d9d9;
+  --clr-default-700: linear-gradient(0deg, #122b4f, #122b4f), #9fe320;
+  --clr-default-740: #eaecf0;
+  --clr-default-760: #f9fafb;
+  --clr-default-770: #e9e9ee;
+  --clr-default-750: #071020;
+  --clr-default-760: radial-gradient(
+      48.69% 48.69% at 57.92% 51.31%,
+      #091926 0%,
+      #060e1d 100%
+    ),
+    #1b2534;
+  --clr-default-800: radial-gradient(
+      48.69% 48.69% at 57.92% 51.31%,
+      #091926 0%,
+      #060e1d 100%
+    ),
+    #9fe320;
+  --clr-default-850: radial-gradient(
+    48.69% 48.69% at 57.92% 51.31%,
+    #091926 0%,
+    #060e1d 100%
+  );
+  --clr-default-860: #122b4f;
+  --clr-default-870: rgba(255, 255, 255, 0.1);
+
+  --clr-default-900: #000;
+  --clr-default-950: #111111;
+
+  --clr-primary-100: #f8fafb;
+  --clr-primary-200: #c7c7c7;
+  --clr-primary-300: #212b3a;
+  --clr-primary-400: #111111;
+  --clr-primary-450: #b8b8b8;
+  --clr-primary-500: rgba(0, 0, 0, 0.1);
+  --clr-primary-600: #505050;
+  --clr-primary-700: #f1f1f1;
+  --clr-primary-800: #8ed804;
+
+  --clr-shadow-900: 1px 1px 5px rgba(0, 0, 0, 0.04);
+  --clr-shadow-800: 2px 2px 8px rgb(7, 194, 54);
+  --clr-shadow-700: 3px 3px 8px rgba(18, 17, 20, 0.705);
+
+  --clr-hover-300: #075fe4;
+
+  --clr-radial-400: rgba(46, 104, 255, 0.04);
+}
+
+// </ПЕРЕМЕННЫЕ>==============================================================
+
+// <ОБОЛОЧКИ>================================================================
+body {
+  font-size: 1.8rem;
+  color: var(--clr-primary-600);
+  background-color: var(--clr-primary-100);
+
+  &.lock {
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    -ms-touch-action: none;
+    touch-action: none;
+    overscroll-behavior: none;
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  width: 100%;
+  min-width: 32rem;
+  min-height: 100%;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 5;
+    background-color: rgb(0 0 0 / 50%);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity var(--transition), visibility var(--transition);
+  }
+
+  &[data-overlay="true"]::before {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity var(--transition), visibility var(--transition);
+  }
+
+  &-sticky {
+    overflow: initial;
+  }
+}
+
+main {
+  flex-grow: 1;
+}
+
+// </ОБОЛОЧКИ>===============================================================
+
+// <СЕТКА>===================================================================
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: var(--container-offset);
+  padding-left: var(--container-offset);
+  width: 100%;
+  max-width: var(--container-width);
+}
+
+// Components - UI
+@import "./ui";
+@import "./stack";
+@import "./typography";
+@import "./components/ui/input";
+@import "./components/ui/textarea";
+
+@import "./libs/intlTelInput";
+@import "./libs/swiper";
+@import "./libs/choices";
+
+// Components - UI
+
+// Components - UI
+@import "./components/ui/menu";
+@import "./components/ui/logo";
+@import "./components/ui/burger";
+
+// Components - UI
+
+// Components - Common
+@import "./components/common/header";
+@import "./components/common/footer";
+@import "./components/common/modal-account";
+
+// Components - Common
+
+// Components - Pages
+@import "./components/indexPage/hero";
+@import "./components/indexPage/partners";
+@import "./components/indexPage/benefits";
+@import "./components/indexPage/start";
+@import "./components/indexPage/account";
+@import "./components/indexPage/payment";
+@import "./components/indexPage/ask";
+@import "./components/indexPage/open";
+
+@import "./components/businessPage/business";
+@import "./components/businessPage/worldwide";
+@import "./components/businessPage/payouts";
+@import "./components/businessPage/corporate";
+@import "./components/businessPage/partner";
+@import "./components/businessPage/putting";
+@import "./components/businessPage/open";
+
+@import "./components/registrationPage/registration";
+
+@import "./components/privatePage/online";
+@import "./components/privatePage/use";
+@import "./components/privatePage/get";
+@import "./components/privatePage/secure";
+@import "./components/privatePage/commission";
+@import "./components/privatePage/open";
+
+// Components - Pages
+
+// </СЕТКА>==================================================================
+
+// <ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>===========================
+
+// <ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>===========================

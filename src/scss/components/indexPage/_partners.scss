@@ -1,0 +1,32 @@
+.partners {
+  background-color: var(--clr-default-100);
+
+  &__list {
+    display: flex;
+    align-items: center;
+    overflow: auto;
+    margin-left: -1.5rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    width: calc(100% + 3rem);
+    white-space: nowrap;
+    gap: 2rem;
+
+    @media (max-width: em(575)) {
+      grid-template-columns: 1fr 1fr;
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+      gap: 1.5rem;
+    }
+  }
+
+  &__item {
+    min-width: 22rem;
+  }
+
+  &__item-image {
+    display: flex;
+    justify-content: center;
+  }
+}
+

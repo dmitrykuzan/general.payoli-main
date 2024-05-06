@@ -1,0 +1,94 @@
+.worldwide {
+  overflow: hidden;
+  padding-top: 21rem;
+  padding-bottom: 16rem;
+
+  @media (max-width: em(992)) {
+    padding-top: 12rem;
+    padding-bottom: 10rem;
+  }
+
+  @media (max-width: em(575)) {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+
+  &__wrapper {
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: -10rem;
+      top: -42rem;
+      z-index: 0;
+      width: 47rem;
+      height: 111rem;
+      background-image: url(../img/business/worldwide/decor.svg);
+      background-size: cover;
+      background-repeat: no-repeat;
+
+      @media (max-width: em(992)) {
+        display: none;
+      }
+    }
+
+    @media (max-width: em(992)) {
+      flex-direction: column-reverse;
+      gap: 3rem;
+    }
+  }
+
+  &__image {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 77.5rem;
+    height: 68.5rem;
+    transform: translateY(-50%);
+
+    @media (max-width: em(1180)) {
+      left: -12rem;
+    }
+
+    @media (max-width: em(992)) {
+      position: initial;
+      left: initial;
+      top: initial;
+      width: initial;
+      height: initial;
+      max-width: 55rem;
+      transform: initial;
+    }
+  }
+
+  &__info {
+    z-index: 1;
+    margin-left: auto;
+    border-radius: 2.4rem;
+    padding: 4.5rem;
+    max-width: 70rem;
+    background-color: var(--clr-default-100);
+    gap: 2.5rem;
+
+    @media (max-width: em(992)) {
+      padding: 3rem;
+      max-width: initial;
+    }
+
+    @media (max-width: em(575)) {
+      padding: 1.5rem;
+    }
+  }
+
+  &__info-image {
+  }
+
+  &__title {
+  }
+
+  &__text {
+    gap: 1.5rem;
+  }
+}
+

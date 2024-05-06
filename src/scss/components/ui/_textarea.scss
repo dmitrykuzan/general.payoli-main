@@ -1,0 +1,50 @@
+.form__textarea {
+  label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+
+    span {
+      font-weight: 500;
+      font-size: 1.4rem;
+      line-height: 140%;
+      color: var(--clr-default-950);
+    }
+  }
+
+  &-wrapper {
+    display: flex;
+    border: 1px solid var(--clr-primary-500);
+    border-radius: 0.8rem;
+    height: 100%;
+    transition: border-color var(--transition);
+
+    textarea {
+      overflow: auto;
+      border: none;
+      border-radius: 0.8rem;
+      padding: 1.6rem;
+      width: 100%;
+      min-height: 16rem;
+      max-height: 20rem;
+      font-weight: 400;
+      font-size: 1.6rem;
+      line-height: 140%;
+      color: var(--clr-primary-400);
+      background-color: var(--clr-primary-100);
+      resize: none;
+
+      &::placeholder {
+        color: var(--clr-default-600);
+      }
+
+      &.focus-visible {
+        outline: none;
+      }
+    }
+
+    &:focus-within {
+      border-color: var(--clr-default-300);
+    }
+  }
+}

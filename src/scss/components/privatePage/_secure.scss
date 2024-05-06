@@ -1,0 +1,123 @@
+.secure {
+  overflow: hidden;
+  margin-top: 13rem;
+  background-color: var(--clr-default-100);
+
+  @media (max-width: em(575)) {
+    margin-top: 5rem;
+  }
+
+  &__wraper {
+    position: relative;
+    padding-top: 12rem;
+    padding-bottom: 12rem;
+    gap: 3rem;
+
+    @media (max-width: em(1360)) {
+      padding-bottom: initial;
+    }
+
+    @media (max-width: em(992)) {
+      flex-direction: column;
+    }
+
+    @media (max-width: em(575)) {
+      padding-top: 5rem;
+    }
+  }
+
+  &__content {
+    max-width: 59rem;
+    gap: 5rem;
+
+    @media (max-width: em(992)) {
+      max-width: initial;
+    }
+  }
+
+  &__title {
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+
+    @media (max-width: em(575)) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    gap: 2.5rem;
+  }
+
+  &__item-done {
+    position: relative;
+    width: 4rem;
+    height: 3rem;
+
+    &::before, &::after {
+      content: '';
+      position: absolute;
+      border-radius: 0.8rem;
+    }
+
+    &::before {
+      left: 0.7rem;
+      bottom: 0;
+      width: 0.2rem;
+      height: 1.7rem;
+      background-color: var(--clr-default-300);
+      transform: rotate(-45deg);
+    }
+
+    &::after {
+      right: 1.4rem;
+      top: 0.4rem;
+      width: 0.2rem;
+      height: 2.3rem;
+      background-color: var(--clr-default-200);
+      transform: rotate(45deg);
+    }
+  }
+
+  &__item-content {
+    gap: 1.2rem;
+  }
+
+  &__item-title {
+    font-weight: 500;
+    font-size: 2.2rem;
+    color: var(--clr-default-950);
+  }
+
+  &__item-text {
+    p {
+      font-size: 1.4rem;
+      line-height: 157%;
+    }
+  }
+
+  &__image {
+    position: absolute;
+    right: -25rem;
+    bottom: 0;
+    width: 82rem;
+    height: 66rem;
+
+    @media (max-width: em(1360)) {
+      position: relative;
+      right: initial;
+      bottom: initial;
+      width: initial;
+      height: initial;
+    }
+
+    @media (max-width: em(992)) {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}

@@ -1,0 +1,123 @@
+<section class="ask">
+  <div class="container">
+    <div class="ask__wrapper stack justify-space-between">
+      <div class="ask__content stack column">
+        <div class="ask__title-wrapper stack column">
+          <h2 class="ask__title typography h2">Ask a question</h2>
+          <div class="ask__text typography p">
+            <p>We like to talk to our clients. Reach out here:</p>
+          </div>
+        </div>
+        <ul class="ask__contacts stack column">
+          <li class="ask__contact">
+            <div class="ask__contact-title">
+              <svg>
+                <use xlink:href="img/sprite.svg#office"></use>
+              </svg>
+
+              <span>Office</span>
+            </div>
+            <div class="ask__contact-text">
+              <p>5307 Victoria Drive #632Vancouver, BC, V5P3V6CANADA</p>
+            </div>
+          </li>
+          <li class="ask__contact">
+            <div class="ask__contact-title">
+              <svg>
+                <use xlink:href="img/sprite.svg#email"></use>
+              </svg>
+
+              <span> Contact </span>
+            </div>
+            <div class="ask__contact-text">
+              <a href="mailto:abc@example.com">hello@payoli.eu</a>
+            </div>
+          </li>
+          <li class="ask__contact">
+            <div class="ask__contact-title">
+              <svg>
+                <use xlink:href="img/sprite.svg#time"></use>
+              </svg>
+
+              <span> Open hours </span>
+            </div>
+            <div class="ask__contact-text">
+              <p>Monday - Saturday: 9am - 7pm</p>
+              <p>Sunday: 12am - 6pm</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="ask__form-wrapper">
+        <form class="ask__form stack column form">
+          <div class="ask__form-inner">
+            <div class="form__input">
+              <label>
+                <span>Name</span>
+                <div class="form__input-wrapper">
+                  <input
+                    type="text"
+                    name="first-name"
+                    placeholder="What is your first name?"
+                  />
+                </div>
+              </label>
+            </div>
+            <div class="form__input">
+              <label>
+                <span>Last name</span>
+                <div class="form__input-wrapper">
+                  <input
+                    type="text"
+                    name="last-name"
+                    placeholder="What is your last name?"
+                  />
+                </div>
+              </label>
+            </div>
+            <div class="form__input">
+              <label>
+                <span>Email</span>
+                <div class="form__input-wrapper">
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="What is your email?"
+                  />
+                </div>
+              </label>
+            </div>
+            <div class="form__input form__input--phone">
+              <label>
+                <span>Phone</span>
+                <div class="form__input-wrapper">
+                  <input
+                    type="tel"
+                    id="phone"
+                    class="number"
+                    name="phone"
+                    placeholder="+33 (999) 999-9999"
+                  />
+                </div>
+              </label>
+            </div>
+            <div class="form__textarea ask__form-textarea">
+              <label>
+                <span>Message</span>
+                <div class="form__textarea-wrapper">
+                  <textarea
+                    placeholder="I would like to get in touch with you..."
+                    name="ask-textarea"
+                  ></textarea>
+                </div>
+              </label>
+            </div>
+          </div>
+          <button class="ask__form-button button button--blue" type="submit">
+            Contact us
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

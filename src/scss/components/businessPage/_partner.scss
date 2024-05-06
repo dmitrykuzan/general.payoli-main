@@ -1,0 +1,142 @@
+.partner {
+  position: relative;
+  z-index: 2;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+  background-image: var(--clr-default-850);
+  gap: 5rem;
+
+  @media (max-width: em(992)) {
+    margin-top: 6rem;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+
+  @media (max-width: em(575)) {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+
+  &__top {
+  }
+
+  &__text-wrapper {
+    gap: 2rem;
+
+    @media (max-width: em(992)) {
+      flex-direction: column;
+    }
+  }
+
+  &__title-wrapper {
+    max-width: 67rem;
+    gap: 2.5rem;
+
+    @media (max-width: em(992)) {
+      max-width: initial;
+    }
+  }
+
+  &__title {
+    font-family: 'Clash Display', sans-serif;
+    font-weight: 500;
+    font-size: fluid-font(5.2rem, 2.4rem);
+    line-height: 100%;
+    color: var(--clr-default-100);
+
+    span {
+      color: var(--clr-default-300);
+    }
+  }
+
+  &__text {
+    font-size: fluid-font(1.8rem, 1.6rem);
+    line-height: 150%;
+    color: var(--clr-primary-700);
+  }
+
+  &__button {
+    height: max-content;
+    min-width: 21rem;
+    min-height: 5rem;
+  }
+
+  &__cards {
+    border-top: 0.1rem solid var(--clr-default-870);
+    border-bottom: 0.1rem solid var(--clr-default-870);
+  }
+
+  &__list {
+    @media (max-width: em(767)) {
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    position: relative;
+    padding: 3rem;
+    width: 100%;
+    max-width: 39rem;
+    gap: 2.5rem;
+
+    &:not(:last-child) {
+      border-right: 0.1rem solid var(--clr-default-870);
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: -1.5rem;
+        bottom: 0;
+        display: none;
+        width: calc(100% + 3rem);
+        height: 0.1rem;
+        background-color: var(--clr-default-870);
+
+        @media (max-width: em(767)) {
+          display: block;
+        }
+      }
+
+      @media (max-width: em(767)) {
+        border-right: initial;
+      }
+    }
+
+    @media (max-width: em(992)) {
+      padding: 2rem;
+    }
+
+    @media (max-width: em(767)) {
+      padding-top: 2rem;
+      padding-right: initial;
+      padding-bottom: 2rem;
+      padding-left: initial;
+      max-width: initial;
+      gap: 1rem;
+    }
+  }
+
+  &__item-image {
+    display: flex;
+    align-items: center;
+    min-height: 8rem;
+    max-width: 21rem;
+  }
+
+  &__item-text {
+    gap: 1.2rem;
+  }
+
+  &__item-title {
+    font-weight: 500;
+    font-size: fluid-font(2.2rem, 1.8rem);
+    line-height: 127%;
+    color: var(--clr-primary-700);
+  }
+
+  &__item-description {
+    font-size: 1.4rem;
+    line-height: 157%;
+    color: var(--clr-primary-200);
+  }
+}
